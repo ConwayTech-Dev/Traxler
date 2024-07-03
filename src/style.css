@@ -1,0 +1,18 @@
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background:
+        linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+        linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 185, 1), rgba(0, 900, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms
+}
