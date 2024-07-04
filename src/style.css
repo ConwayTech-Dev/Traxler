@@ -1,14 +1,17 @@
-.topnav a {
-    text-decoration: none;
-    display: inline-block; /* Ensures the background size transition applies correctly */
-    background:
-        linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 185, 1), rgba(0, 255, 200, 1));
-    background-size: 0 3px;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms ease-in-out; /* Smooth transition for the background size */
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust based on your needs */
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, rgb(255, 153, 0), rgba(255, 0, 185, 1), rgba(0, 255, 200, 1));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
 
-.topnav a:hover {
-    background-size: 100% 3px; /* Expands the underline to full width on hover */
+.underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
